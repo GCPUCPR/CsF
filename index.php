@@ -1,4 +1,6 @@
 <?php
+ob_start();
+session_start();
 /*
 |---------------------------------------------------------------
 | PHP ERROR REPORTING LEVEL
@@ -118,7 +120,9 @@ require_once BASEPATH.'codeigniter/CodeIgniter'.EXT;
  **/
 function base_url($x)
 	{
-		return('http://www2.pucpr.br/reol/ici/'.$x);
+		//return('/projeto/CsF/'.$x);
+		return('http://www2.pucpr.br/reol/csf/'.$x);
+		print_r($_SERVER);
 	}
 
 /* End of file index.php */

@@ -40,7 +40,7 @@
 |
 */
 
-$route['default_controller'] = "ici";
+$route['default_controller'] = "csf";
 $route['scaffolding_trigger'] = "";
 
 
