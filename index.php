@@ -120,8 +120,8 @@ require_once BASEPATH.'codeigniter/CodeIgniter'.EXT;
  **/
 function base_url($x)
 	{
-		//return('/projeto/CsF/'.$x);
-		return('http://www2.pucpr.br/reol/csf/'.$x);
+		return('/projetos/CsF/'.$x);
+		//return('http://www2.pucpr.br/reol/csf/'.$x);
 		print_r($_SERVER);
 	}
 

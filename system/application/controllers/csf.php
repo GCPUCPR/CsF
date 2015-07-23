@@ -78,7 +78,7 @@ class csf extends Controller {
 		$this -> cab();
 
 		if ($this -> idioma == 'en') {
-
+			$this -> load -> view('csf/site_what_en');
 		} else {
 			$this -> load -> view('csf/site_what');
 
@@ -156,7 +156,7 @@ class csf extends Controller {
 		$this -> cab();
 
 		if ($this -> idioma == 'en') {
-
+$this -> load -> view('csf/site_faq_en');
 		} else {
 			$this -> load -> view('csf/site_faq');
 
