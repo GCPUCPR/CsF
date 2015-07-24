@@ -17,18 +17,17 @@ class csf extends Controller {
 
 	function cab() {
 		//$id = $this -> session -> userdata('idioma');
-		if (isset($_SESSION['idioma']))	
-			{
-				$id = $_SESSION['idioma'];
-			} else {
-				$id = 'pt';
-			}
-		
+		if (isset($_SESSION['idioma'])) {
+			$id = $_SESSION['idioma'];
+		} else {
+			$id = 'pt';
+		}
+
 		if (strlen($id) == 0) {
 			$id = 'pt';
 		}
 		$this -> idioma = trim($id);
-				
+
 		$this -> load -> view("header/header");
 		$this -> load -> view("csf/site_css");
 		$this -> load -> view('componentes/headerpuc');
@@ -45,9 +44,9 @@ class csf extends Controller {
 		$this -> cab();
 
 		if ($this -> idioma == 'en') {
-			//$this -> load -> view('csf/site_crousel_part_01_en');
-			//$this -> load -> view('csf/site_crousel_part_02_en');
-			//$this -> load -> view('csf/site_crousel_part_03_en');
+			$this -> load -> view('csf/site_crousel_part_01_en');
+			$this -> load -> view('csf/site_crousel_part_02_en');
+			$this -> load -> view('csf/site_crousel_part_03_en');
 
 		} else {
 			$this -> load -> view('csf/site_crousel_part_01');
@@ -91,7 +90,7 @@ class csf extends Controller {
 		$this -> cab();
 
 		if ($this -> idioma == 'en') {
-
+			$this -> load -> view('csf/site_editais_en');
 		} else {
 			$this -> load -> view('csf/site_editais');
 
@@ -104,33 +103,33 @@ class csf extends Controller {
 		$this -> cab();
 
 		if ($this -> idioma == 'en') {
-
+			$this -> load -> view('csf/site_eventos_en');
 		} else {
 			$this -> load -> view('csf/site_eventos');
 
 		}
 
-		//$this->load->view('componentes/footer');
+		$this -> load -> view('componentes/footer');
 	}
 
 	function despedida_01() {
 		$this -> cab();
 
 		if ($this -> idioma == 'en') {
-
+			$this -> load -> view('csf/site_despedida_01_en');
 		} else {
 			$this -> load -> view('csf/site_despedida_01');
 
 		}
 
-		//$this->load->view('componentes/footer');
+		$this -> load -> view('componentes/footer');
 	}
 
 	function indicadores() {
 		$this -> cab();
 
 		if ($this -> idioma == 'en') {
-
+			$this -> load -> view('csf/site_indicadores_en');
 		} else {
 			$this -> load -> view('csf/site_indicadores');
 
@@ -143,7 +142,7 @@ class csf extends Controller {
 		$this -> cab();
 
 		if ($this -> idioma == 'en') {
-
+			$this -> load -> view('csf/site_depoimentos_en');
 		} else {
 			$this -> load -> view('csf/site_depoimentos');
 
@@ -156,7 +155,7 @@ class csf extends Controller {
 		$this -> cab();
 
 		if ($this -> idioma == 'en') {
-$this -> load -> view('csf/site_faq_en');
+			$this -> load -> view('csf/site_faq_en');
 		} else {
 			$this -> load -> view('csf/site_faq');
 
@@ -169,7 +168,7 @@ $this -> load -> view('csf/site_faq_en');
 		$this -> cab();
 
 		if ($this -> idioma == 'en') {
-
+			$this -> load -> view('csf/site_contato_en');
 		} else {
 			$this -> load -> view('csf/site_contato');
 
