@@ -3,7 +3,7 @@ class csf extends Controller {
 	var $idioma = 'pt';
 	function __construct() {
 		parent::__construct();
-		//$this -> load -> database();
+		$this -> load -> database();
 		$this -> load -> helper('cookie');
 
 		$this -> lang -> load("app", "portuguese");
@@ -16,6 +16,22 @@ class csf extends Controller {
 	}
 
 	function cab() {
+		
+		/* Carrega classes adicionais */
+		$css = array();
+		$js = array();
+		array_push($css, 'style_cab.css');
+		array_push($js, 'js_cab.js');
+		array_push($js, 'unslider.min.js');
+		array_push($js, 'high/highcharts.js');
+
+		/* transfere para variavel do codeigniter */
+		$data['css'] = $css;
+		$data['js'] = $js;
+		
+		
+		
+		
 		//$id = $this -> session -> userdata('idioma');
 		if (isset($_SESSION['idioma'])) {
 			$id = $_SESSION['idioma'];
@@ -93,6 +109,12 @@ class csf extends Controller {
 			$this -> load -> view('csf/site_editais_en');
 		} else {
 			$this -> load -> view('csf/site_editais');
+			
+		//carrega grafico da situacao dos estudantes intercambistas
+		$data = array();
+		$line = $this -> csfs -> mostra_dados_std_status();
+		$data['dado'] = $line;
+		$this -> load -> view('csf/view_std_status', $data);
 
 		}
 
@@ -127,7 +149,9 @@ class csf extends Controller {
 
 	function indicadores() {
 		$this -> cab();
-
+		/* Models */
+		$this -> load -> model('csfs');
+		 
 		if ($this -> idioma == 'en') {
 			$this -> load -> view('csf/site_indicadores_en');
 		} else {
@@ -172,6 +196,27 @@ class csf extends Controller {
 		} else {
 			$this -> load -> view('csf/site_contato');
 
+		}
+
+		$this -> load -> view('componentes/footer');
+	}
+
+	function view_std_status() {
+		$this -> load -> model('csfs');
+		$this -> cab();
+
+		if ($this -> idioma == 'en') {
+			$this -> load -> view('csf/view_std_status_en');
+		} else {
+			//$this -> load -> view('csf/site_pagina_grafico');
+			//carrega grafico da situacao dos estudantes intercambistas
+			$data = array();
+			$line = $this -> csfs -> mostra_dados_std_status();
+			$data['dado'] = $line;
+			$this -> load -> view('csf/view_std_status', $data);
+
+			//View de agrupamento das divs
+			$this -> load -> view('csf/group_divs_indicadores');
 		}
 
 		$this -> load -> view('componentes/footer');
