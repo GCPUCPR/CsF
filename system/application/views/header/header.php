@@ -14,14 +14,14 @@
     <link href="<?php echo base_url('');?>css/bootstrap.min.css" rel="stylesheet">
     <link href="<?php echo base_url('');?>css/caroussel.css" rel="stylesheet">
     <link href="<?php echo base_url('');?>css/font-stylesheet.css" rel="stylesheet">
-
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url('');?>css/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="<?php echo base_url('');?>css/tabstyles.css" />
+    <link href="<?php echo base_url('');?>css/tabs.css" rel="stylesheet" type="text/css"/>
+    <link href="<?php echo base_url('');?>css/tabstyles.css" rel="stylesheet" type="text/css"/>
 
     <script src="<?php echo base_url('');?>js/modernizr.custom.js"></script>
     <script src="<?php echo base_url('');?>js/bootstrap.js"></script>
     <script src="<?php echo base_url('');?>js/bootstrap.min.js"></script>
     <script src="<?php echo base_url('');?>js/npm.js"></script>
+    <script src="<?php echo base_url('');?>js/high/highcharts.js"></script>
 
 	<!-- Bootstrap core JavaScript
    	================================================== -->
@@ -59,6 +59,8 @@
 	  ga('create', 'UA-63147889-1', 'auto');
 	  ga('send', 'pageview');
 	</script>
+	
+
 
 		
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->

@@ -1,8 +1,12 @@
+.money
+	{
+		text-align: right;
+		width: 150px;
+	}
 .form_string
 	{
 		font-size: 18px;
 		font-family: 'CICPG',Helvetica, Tahoma, Verdana, Arial, sans-serif;
-		width: 98%;
 		border: 1px solid #A0A0A0;
 		padding: 2px;
 	}

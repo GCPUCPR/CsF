@@ -1,7 +1,7 @@
 <?php
 $dados = '';
 foreach ($dado as $key => $value) {
-	$dados .= "['$key',   $value],";
+	$dados .= "['$key', $value],";
 }
 ?>
 <!-- Grafico HighChart--->

@@ -1,3 +1,12 @@
+/* UI */
+.ui-autocomplete-loading {
+  background: #fff url('../img/ajax/ajax_loader.gif') right center no-repeat !important;
+}
+
+.ui-state-focus { color: blue; }
+.ui-menu-item { color: blue; }
+.ui-menu-item:hover { color: green; }
+
 /* Botoes */
 a.botao-excluir {
 	border: 1px solid #FF0000;
@@ -8,6 +17,14 @@ a.botao-excluir {
 	background-color: #800000;
 	color: #FFFFFF;
 }
+
+.botao-grande
+	{
+	padding: 10px 20px 10px 20px;
+	margin-left: 10px;
+	}
+
+/* Corpo */
 body {
 	margin: 0px;
 	padding: 0px;
@@ -42,12 +59,7 @@ a:hover {
 	opacity: 1;
 	transition: 1s;
 }
-/* Tabelas */
-.tabela00 {
-	padding: 5px;
-	margin: 0px;
-	font-size: 12px;
-}
+
 .lt0 {
 	font-size: 10px;
 }
@@ -82,12 +94,9 @@ a.lt1 {
 /* Formulario */
 #form_search {
 	padding: 40px 0px 0px 0px;
-	position: absolute;
-	left: 50%;
-	width: 600px;
+	width: 100%;
 	height: 100px;
-	margin-left: -300px;
-}
+	}
 .form_search_in {
 	font-size: 14px;
 	height: 40px;
@@ -98,6 +107,7 @@ a.lt1 {
 	height: 40px;
 	padding: 5px 20px;
 }
+
 /* Photos - Fotografia */
 #photo
 	{
@@ -121,6 +131,12 @@ a.lt1 {
 }
 .borderb1 {
 	border-bottom: 1px solid #000000;
+}
+.bordert1 {
+	border-top: 1px solid #000000;
+}
+.borderr1 {
+	border-right: 1px solid #000000;
 }
 .radius10 {
 	border-radius: 10px;

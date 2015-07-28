@@ -9,24 +9,24 @@
 <!--Botões-->
 <div class="botoes-indicadores">
 	<!--Mapa mundo-->
-	<a href="<?php echo base_url('xxx');?>">
+	<a href="<?php echo base_url('index.php/csf/view_std_partners');?>">
 	<div class="botao-1">
-		<span><i class="fa fa-map-marker"></i> Mapa dos bolsistas CsF</span>
+		<span><i class="fa fa-map-marker"></i>Bolsas por Parceiros</span>
 	</div> </a>
 	<!--Grafico estudantes por país-->
-	<a href="<?php echo base_url('xxx');?>">
+	<a href="<?php echo base_url('index.php/csf/view_std_country');?>">
 	<div class="botao-1">
 		<span>Bolsas por país</span>
 	</div> </a>
 	<!--Texto-->
-	<a href="<?php echo base_url('xxx');?>">
+	<a href="<?php echo base_url('index.php/csf/view_std_course');?>">
 	<div class="botao-2">
 		<span>Bolsas por curso</span>
 	</div> </a>
 	<!--Texto-->
-	<a href="<?php echo base_url('xxx');?>">
+	<a href="<?php echo base_url('index.php/csf/view_std_university');?>">
 	<div class="botao-3">
-		<span>Bolsas por curso e instituição</span>
+		<span>Bolsas por instituição</span>
 	</div> </a>
 	<!--Grafico estudantes por país-->
 	<a href="<?php echo base_url('index.php/csf/view_std_status');?>">
@@ -34,7 +34,7 @@
 		<span>Situação dos estudantes</span>
 	</div> </a>
 	</a> <!--Texto-->
-	<a href="<?php echo base_url('xxx');?>">
+	<a href="<?php echo base_url('index.php/csf/view_std_genero');?>">
 	<div class="botao-5">
 		<span>Bolsas por gênero </span>
 	</div> </a>

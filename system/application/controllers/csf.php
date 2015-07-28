@@ -16,7 +16,7 @@ class csf extends Controller {
 	}
 
 	function cab() {
-		
+
 		/* Carrega classes adicionais */
 		$css = array();
 		$js = array();
@@ -24,14 +24,10 @@ class csf extends Controller {
 		array_push($js, 'js_cab.js');
 		array_push($js, 'unslider.min.js');
 		array_push($js, 'high/highcharts.js');
-
 		/* transfere para variavel do codeigniter */
 		$data['css'] = $css;
 		$data['js'] = $js;
-		
-		
-		
-		
+
 		//$id = $this -> session -> userdata('idioma');
 		if (isset($_SESSION['idioma'])) {
 			$id = $_SESSION['idioma'];
@@ -109,12 +105,12 @@ class csf extends Controller {
 			$this -> load -> view('csf/site_editais_en');
 		} else {
 			$this -> load -> view('csf/site_editais');
-			
-		//carrega grafico da situacao dos estudantes intercambistas
-		$data = array();
-		$line = $this -> csfs -> mostra_dados_std_status();
-		$data['dado'] = $line;
-		$this -> load -> view('csf/view_std_status', $data);
+
+			//carrega grafico da situacao dos estudantes intercambistas
+			$data = array();
+			$line = $this -> csfs -> mostra_dados_std_status();
+			$data['dado'] = $line;
+			$this -> load -> view('csf/view_std_status', $data);
 
 		}
 
@@ -151,7 +147,7 @@ class csf extends Controller {
 		$this -> cab();
 		/* Models */
 		$this -> load -> model('csfs');
-		 
+
 		if ($this -> idioma == 'en') {
 			$this -> load -> view('csf/site_indicadores_en');
 		} else {
@@ -201,6 +197,7 @@ class csf extends Controller {
 		$this -> load -> view('componentes/footer');
 	}
 
+	/*******************NOVOS INDICADORES******************************/
 	function view_std_status() {
 		$this -> load -> model('csfs');
 		$this -> cab();
@@ -209,11 +206,122 @@ class csf extends Controller {
 			$this -> load -> view('csf/view_std_status_en');
 		} else {
 			//$this -> load -> view('csf/site_pagina_grafico');
+
 			//carrega grafico da situacao dos estudantes intercambistas
 			$data = array();
 			$line = $this -> csfs -> mostra_dados_std_status();
 			$data['dado'] = $line;
 			$this -> load -> view('csf/view_std_status', $data);
+
+			//View de agrupamento das divs
+			$this -> load -> view('csf/group_divs_indicadores');
+		}
+
+		$this -> load -> view('componentes/footer');
+	}
+
+	function view_std_genero() {
+		$this -> load -> model('csfs');
+		$this -> cab();
+
+		if ($this -> idioma == 'en') {
+			$this -> load -> view('csf/view_std_genero_en');
+		} else {
+			//$this -> load -> view('csf/site_pagina_grafico');
+
+			//carrega grafico estudantes por genero
+			$data_gen = array();
+			$line = $this -> csfs -> mostra_dados_std_genero();
+			$data_gen['dado_gen'] = $line;
+			$this -> load -> view('csf/view_std_gen', $data_gen);
+
+			//View de agrupamento das divs
+			$this -> load -> view('csf/group_divs_indicadores');
+		}
+
+		$this -> load -> view('componentes/footer');
+	}
+
+	function view_std_university() {
+		$this -> load -> model('csfs');
+		$this -> cab();
+
+		if ($this -> idioma == 'en') {
+			$this -> load -> view('csf/view_std_university_en');
+		} else {
+			//$this -> load -> view('csf/site_pagina_grafico');
+
+			//carrega grafico estudantes por universidade
+			$data_university = array();
+			$line = $this -> csfs -> mostra_dados_std_university();
+			$data_university['dado_university'] = $line;
+			$this -> load -> view('csf/view_std_university', $data_university);
+
+			//View de agrupamento das divs
+			$this -> load -> view('csf/group_divs_indicadores');
+		}
+
+		$this -> load -> view('componentes/footer');
+	}
+
+	function view_std_course() {
+		$this -> load -> model('csfs');
+		$this -> cab();
+
+		if ($this -> idioma == 'en') {
+			$this -> load -> view('csf/view_std_course_en');
+		} else {
+			//$this -> load -> view('csf/site_pagina_grafico');
+
+			//carrega grafico dos cursos que mais enviam alunos
+			$data_course = array();
+			$line = $this -> csfs -> mostra_std_course();
+			$data_course['dado_course'] = $line;
+			$this -> load -> view('csf/view_std_course', $data_course);
+
+			//View de agrupamento das divs
+			$this -> load -> view('csf/group_divs_indicadores');
+		}
+
+		$this -> load -> view('componentes/footer');
+	}
+
+	function view_std_country() {
+		$this -> load -> model('csfs');
+		$this -> cab();
+
+		if ($this -> idioma == 'en') {
+			$this -> load -> view('csf/view_std_course_en');
+		} else {
+			//$this -> load -> view('csf/site_pagina_grafico');
+
+			//carrega grafico estudantes por paises
+			$data_country = array();
+			$line = $this -> csfs -> mostra_dados_std_country();
+			$data_country['dado_country'] = $line;
+			$this -> load -> view('csf/view_std_country', $data_country);
+
+			//View de agrupamento das divs
+			$this -> load -> view('csf/group_divs_indicadores');
+		}
+
+		$this -> load -> view('componentes/footer');
+	}
+
+	function view_std_partners() {
+		$this -> load -> model('csfs');
+		$this -> cab();
+
+		if ($this -> idioma == 'en') {
+			$this -> load -> view('csf/view_std_course_en');
+		} else {
+			//$this -> load -> view('csf/site_pagina_grafico');
+
+			//carrega grafico de parceiros
+			$data_partners = array();
+			$line = $this -> csfs -> mostra_std_partners();
+			$data_partners['dado_partners'] = $line;
+			$this -> load -> view('csf/view_std_partners', $data_partners);
 
 			//View de agrupamento das divs
 			$this -> load -> view('csf/group_divs_indicadores');

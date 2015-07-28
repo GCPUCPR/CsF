@@ -745,8 +745,9 @@ class csfs extends Model {
 		return ($sx);
 
 	}
-/*******************NOVOS INDICADORES******************************/
-	/** Alunos por pais */
+
+	/*******************NOVOS INDICADORES******************************/
+	/** Alunos por situacao de  */
 	function mostra_dados_std_status() {
 		$sql = "select cs_descricao, count(cs_descricao) as qtd
 				from csf_view group by cs_descricao order by qtd desc
@@ -765,8 +766,104 @@ class csfs extends Model {
 		return ($dados);
 	}
 
+	/** Alunos por gênero */
+	function mostra_dados_std_genero() {
+		$sql = "select CASE us_genero 
+					   WHEN 'M' THEN 'Masculino' 
+					   WHEN 'F' THEN 'Feminino'   
+					   ELSE 'Atualizar Cadastro' 
+					   END as genero, 
+					   count(*) as qtd
+				from csf_view group by us_genero order by genero
+				";
+		$rlt = $this -> db -> query($sql);
+		$rlt = $rlt -> result_array($rlt);
+		$line = $rlt[0];
+		//return values
+		$tot = 0;
+		$dados = array();
+		for ($r = 0; $r < count($rlt); $r++) {
+			$line = $rlt[$r];
+			$dados[$line['genero']] = $line['qtd'];
+		}
+		return ($dados);
+	}
 
+	/** Alunos por universidade */
+	function mostra_dados_std_university() {
+		$sql = "select gpip_nome, count(gpip_nome) as qtd
+				from csf_view group by gpip_nome order by qtd desc limit 10
+				";
+		$rlt = $this -> db -> query($sql);
+		$rlt = $rlt -> result_array($rlt);
+		$line = $rlt[0];
+		//return values
+		$tot = 0;
+		$dados = array();
+		for ($r = 0; $r < count($rlt); $r++) {
+			$line = $rlt[$r];
+			$dados[$line['gpip_nome']] = $line['qtd'];
+		}
+		return ($dados);
+	}
 
+	/** Alunos por cursos */
+	function mostra_std_course() {
+		$sql = "select csf_curso, count(csf_curso) as qtd
+				from csf_view 
+				group by csf_curso 
+				order by qtd desc 
+				limit 7
+				";
+		$rlt = $this -> db -> query($sql);
+		$rlt = $rlt -> result_array($rlt);
+		$line = $rlt[0];
+		//return values
+		$tot = 0;
+		$dados = array();
+		for ($r = 0; $r < count($rlt); $r++) {
+			$line = $rlt[$r];
+			$dados[$line['csf_curso']] = $line['qtd'];
+			print_r($dados);
+		}
+		return ($dados);
+	}
+
+	/** Alunos por pais */
+	function mostra_dados_std_country() {
+		$sql = "select nome, count(nome) as qtd
+				from csf_view group by nome order by qtd desc limit 7
+				";
+		$rlt = $this -> db -> query($sql);
+		$rlt = $rlt -> result_array($rlt);
+		$line = $rlt[0];
+		//return values
+		$tot = 0;
+		$dados = array();
+		for ($r = 0; $r < count($rlt); $r++) {
+			$line = $rlt[$r];
+			$dados[$line['nome']] = $line['qtd'];
+		}
+		return ($dados);
+	}
+
+	/** Alunos por parceiros */
+	function mostra_std_partners() {
+		$sql = "select cp_descricao, count(cp_descricao) as qtd
+				from csf_view group by cp_descricao order by qtd desc limit 7
+				";
+		$rlt = $this -> db -> query($sql);
+		$rlt = $rlt -> result_array($rlt);
+		$line = $rlt[0];
+		//return values
+		$tot = 0;
+		$dados = array();
+		for ($r = 0; $r < count($rlt); $r++) {
+			$line = $rlt[$r];
+			$dados[$line['cp_descricao']] = $line['qtd'];
+		}
+		return ($dados);
+	}
 
 }
 ?>

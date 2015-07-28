@@ -4,6 +4,7 @@ foreach ($dado_partners as $key => $value) {
 	$dados .= "['$key',   $value],";
 }
 ?>
+
 <!-- Grafico HighChart--->
 <script type="text/javascript">
 	$(function() {

@@ -1,0 +1,13 @@
+/* Tabelas */
+.tabela00 {
+	padding: 5px;
+	margin: 0px;
+	font-size: 12px;
+}
+
+.tabela00 tr:nth-child(even) {
+	background: #EEE
+}
+.tabela00 tr:nth-child(odd) {
+	background: #FFF
+}

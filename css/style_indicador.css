@@ -1,0 +1,13 @@
+.indicators
+	{
+		background-color: #EEEEEE;
+		border: 0px solid #000000;
+	}
+.indicators legend
+	{
+		color: #FFFFFF;
+		padding: 10px 30px 10px 30px;
+		background-color: #990000;
+		width: 350px;
+		font-size: 20px;
+	}

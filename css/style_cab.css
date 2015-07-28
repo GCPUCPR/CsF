@@ -28,6 +28,10 @@
 	#content {
 		margin: 0px 20px 10px 20px;
 	}
+	.nopr
+		{
+		display: none;	
+		}
 }
 #foot {
 	background-color: #E0E0E0;
@@ -68,11 +72,12 @@
 	margin-left: 350px;
 	color: #FFFFFF;
 }
+
+
 #cab_nav {
-	margin-top: 0px;
+	//margin-top: 0px;
 	width: 100%;
 	background-color: #8A0419;
-	padding-top: 0px;
 	font-size: 12px;
 	z-index: 10;
 	height: 30px;
@@ -81,17 +86,20 @@
 	left: 0px;
 	box-shadow: 0px 3px 3px #888888;
 }
-#cab_nav ul li {
+.cab_nav_td {
 	list-style-type: none;
+	width: auto;
 	margin: 0;
 	display: inline;
+	font-size: 14px;
 	padding: 5px 10px 5px 10px;
 }
-#cab_nav ul li:hover {
+.cab_nav_td:hover {
 	background-color: #6A0000;
 }
 #cab_nav a {
 	margin-left: 0px;
+	margin-top: 0px;
 	color: #FFFFFF;
 	text-decoration: none;
 }
@@ -158,6 +166,13 @@
 .icone-iniciacao-cientifica {
 	color: #b82955;
 	border-bottom: solid 10px #b82955;
+}
+.icone-green {
+	color: #29b855;
+	border-bottom: solid 10px #29b855;
+}
+.icone-green-cor {
+	color: #29b855;
 }
 /****/
 .icone-admin-cor {
@@ -244,7 +259,7 @@
 }
 #content {
 	min-width: 780px;
-	min-height: 300px;
+	min-height: 450px;
 	background-color: #FFFFFF;
 	padding: 10px;
 }

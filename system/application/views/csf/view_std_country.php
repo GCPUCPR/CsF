@@ -7,7 +7,7 @@ foreach ($dado_country as $key => $value) {
 <!-- Grafico HighChart--->
 <script type="text/javascript">
 	$(function() {
-		$('#gr5').highcharts({//alterar nome da div para cada grafico
+		$('#gr5').highcharts({
 			chart : {
 				type : 'bar'
 			},
