@@ -43,6 +43,7 @@ foreach ($dado_partners as $key => $value) {
 			},
 			series : [{
 				name : 'Population',
+				color: '#B21120',
 				data : [<?php echo "$dados" ?>],
 				dataLabels : {
 					enabled : true,
@@ -62,4 +63,8 @@ foreach ($dado_partners as $key => $value) {
 </script>
 <div id="graf" style="width: 800px; height: 400px; margin: 0 auto padding-bottom: 8px; border: 1px solid #AF3E4D; margin-top: 150px; "></div>
 <br />
+<!--Botao para retorna a pag anterior-->
+<form>
+    <input type="button" value="Voltar"onClick="JavaScript: window.history.back();">
+</form>
 <br />

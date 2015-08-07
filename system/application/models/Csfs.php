@@ -821,7 +821,6 @@ class csfs extends Model {
 		for ($r = 0; $r < count($rlt); $r++) {
 			$line = $rlt[$r];
 			$dados[$line['csf_curso']] = $line['qtd'];
-			print_r($dados);
 		}
 		return ($dados);
 	}

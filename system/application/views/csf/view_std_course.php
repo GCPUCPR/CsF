@@ -60,6 +60,10 @@ foreach ($dado_course as $key => $value) {
 </script>
 <div id="graf-2" style="width: 800px; height: 400px; margin: 0 auto padding-bottom: 8px; border: 1px solid #AF3E4D; margin-top: 150px; "></div>
 <br />
+<!--Botao para retorna a pag anterior-->
+<form>
+    <input type="button" value="Voltar"onClick="JavaScript: window.history.back();">
+</form>
 <br />
 
 
