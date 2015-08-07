@@ -8,7 +8,8 @@ foreach ($dado_partners as $key => $value) {
 <!-- Grafico HighChart--->
 <script type="text/javascript">
 	$(function() {
-		$('#gr6').highcharts({//alterar nome da div para cada grafico
+		//alterar nome da div para cada grafico
+		$('#graf').highcharts({
 			chart : {
 				type : 'line'
 			},
@@ -57,7 +58,8 @@ foreach ($dado_partners as $key => $value) {
 				}
 			}]
 		});
-	}); 
+	});
 </script>
-
-
+<div id="graf" style="width: 800px; height: 400px; margin: 0 auto padding-bottom: 8px; border: 1px solid #AF3E4D; margin-top: 150px; "></div>
+<br />
+<br />

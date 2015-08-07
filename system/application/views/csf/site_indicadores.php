@@ -15,27 +15,27 @@
 	</div> </a>
 	<!--Grafico estudantes por país-->
 	<a href="<?php echo base_url('index.php/csf/view_std_country');?>">
-	<div class="botao-1">
+	<div class="botao-2">
 		<span>Bolsas por país</span>
 	</div> </a>
 	<!--Texto-->
 	<a href="<?php echo base_url('index.php/csf/view_std_course');?>">
-	<div class="botao-2">
+	<div class="botao-3">
 		<span>Bolsas por curso</span>
 	</div> </a>
 	<!--Texto-->
 	<a href="<?php echo base_url('index.php/csf/view_std_university');?>">
-	<div class="botao-3">
+	<div class="botao-4">
 		<span>Bolsas por instituição</span>
 	</div> </a>
 	<!--Grafico estudantes por país-->
 	<a href="<?php echo base_url('index.php/csf/view_std_status');?>">
-	<div class="botao-4">
+	<div class="botao-5">
 		<span>Situação dos estudantes</span>
 	</div> </a>
 	</a> <!--Texto-->
 	<a href="<?php echo base_url('index.php/csf/view_std_genero');?>">
-	<div class="botao-5">
+	<div class="botao-6">
 		<span>Bolsas por gênero </span>
 	</div> </a>
 </div>

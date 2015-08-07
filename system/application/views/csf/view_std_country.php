@@ -7,9 +7,9 @@ foreach ($dado_country as $key => $value) {
 <!-- Grafico HighChart--->
 <script type="text/javascript">
 	$(function() {
-		$('#gr5').highcharts({
+		$('#graf-1').highcharts({
 			chart : {
-				type : 'bar'
+				type : 'column'
 			},
 			title : {
 				text : 'Paises de destino dos intercambistas:'
@@ -58,5 +58,8 @@ foreach ($dado_country as $key => $value) {
 		});
 	}); 
 </script>
+<div id="graf-1" style="width: 800px; height: 400px; margin: 0 auto padding-bottom: 8px; border: 1px solid #AF3E4D; margin-top: 150px; "></div>
+<br />
+<br />
 
 

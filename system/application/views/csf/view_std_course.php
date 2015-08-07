@@ -7,15 +7,15 @@ foreach ($dado_course as $key => $value) {
 <!-- Grafico HighChart--->
 <script type="text/javascript">
 	$(function() {
-		$('#gr7').highcharts({//alterar nome da div para cada grafico
+		$('#graf-2').highcharts({//alterar nome da div para cada grafico
 			chart : {
-				type : 'bar'
+				type : 'line'
 			},
 			title : {
 				text : 'Cursos que mais enviam estudantes...:'
 			},
 			subtitle : {
-				text : 'Top 10'
+				text : 'Top 7'
 			},
 			xAxis : {
 				type : 'category',
@@ -58,5 +58,8 @@ foreach ($dado_course as $key => $value) {
 		});
 	}); 
 </script>
+<div id="graf-2" style="width: 800px; height: 400px; margin: 0 auto padding-bottom: 8px; border: 1px solid #AF3E4D; margin-top: 150px; "></div>
+<br />
+<br />
 
 

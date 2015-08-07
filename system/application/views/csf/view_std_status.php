@@ -1,13 +1,13 @@
 <?php
 $dados = '';
-foreach ($dado as $key => $value) {
+foreach ($dado_st as $key => $value) {
 	$dados .= "['$key', $value],";
 }
 ?>
 <!-- Grafico HighChart--->
 <script type="text/javascript">
 	$(function() {
-		$('#gr2').highcharts({
+		$('#graf-4').highcharts({
 			chart : {
 				type : 'bar'
 			},
@@ -58,5 +58,7 @@ foreach ($dado as $key => $value) {
 		});
 	}); 
 </script>
-
+<div id="graf-4" style="width: 800px; height: 400px; margin: 0 auto padding-bottom: 8px; border: 1px solid #AF3E4D; margin-top: 150px; "></div>
+<br />
+<br />
 

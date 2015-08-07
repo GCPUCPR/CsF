@@ -11,23 +11,22 @@
     <title>Ciências sem Fronteiras</title>
 
     <!-- Bootstrap -->
+    
     <link href="<?php echo base_url('');?>css/bootstrap.min.css" rel="stylesheet">
     <link href="<?php echo base_url('');?>css/caroussel.css" rel="stylesheet">
     <link href="<?php echo base_url('');?>css/font-stylesheet.css" rel="stylesheet">
     <link href="<?php echo base_url('');?>css/tabs.css" rel="stylesheet" type="text/css"/>
     <link href="<?php echo base_url('');?>css/tabstyles.css" rel="stylesheet" type="text/css"/>
 
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="<?php echo base_url('');?>js/modernizr.custom.js"></script>
-    <script src="<?php echo base_url('');?>js/bootstrap.js"></script>
-    <script src="<?php echo base_url('');?>js/bootstrap.min.js"></script>
     <script src="<?php echo base_url('');?>js/npm.js"></script>
     <script src="<?php echo base_url('');?>js/high/highcharts.js"></script>
 
 	<!-- Bootstrap core JavaScript
    	================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="<?php echo base_url('');?>js/bootstrap.min.js"></script>
+  
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
     <script src="<?php echo base_url('');?>js/vendor/holder.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
