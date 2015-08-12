@@ -827,8 +827,8 @@ class csfs extends Model {
 
 	/** Alunos por pais */
 	function mostra_dados_std_country() {
-		$sql = "select nome, count(nome) as qtd
-				from csf_view group by nome order by qtd desc limit 7
+		$sql = "select nome_pt, count(nome_pt) as qtd
+				from csf_view group by nome_pt order by qtd desc limit 7
 				";
 		$rlt = $this -> db -> query($sql);
 		$rlt = $rlt -> result_array($rlt);
@@ -838,7 +838,7 @@ class csfs extends Model {
 		$dados = array();
 		for ($r = 0; $r < count($rlt); $r++) {
 			$line = $rlt[$r];
-			$dados[$line['nome']] = $line['qtd'];
+			$dados[$line['nome_pt']] = $line['qtd'];
 		}
 		return ($dados);
 	}
@@ -857,6 +857,26 @@ class csfs extends Model {
 		for ($r = 0; $r < count($rlt); $r++) {
 			$line = $rlt[$r];
 			$dados[$line['cp_descricao']] = $line['qtd'];
+		}
+		return ($dados);
+	}
+
+	/** Alunos no mundo */
+	function mostra_std_map() {
+		$sql = "select left(csf_saida,4) as ano, count(*) as qtd
+				from csf_view 
+				group by ano 
+				order by ano
+				";
+		$rlt = $this -> db -> query($sql);
+		$rlt = $rlt -> result_array($rlt);
+		$line = $rlt[0];
+		//return values
+		$tot = 0;
+		$dados = array();
+		for ($r = 0; $r < count($rlt); $r++) {
+			$line = $rlt[$r];
+			$dados[$line['ano']] = $line['qtd'];
 		}
 		return ($dados);
 	}

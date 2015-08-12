@@ -8,34 +8,55 @@
 </div>
 <!--Botões-->
 <div class="botoes-indicadores">
-	<!--Mapa mundo-->
+	<!--Grafico Parceiros-->
 	<a href="<?php echo base_url('index.php/csf/view_std_partners');?>">
 	<div class="botao-1">
 		<span><i class="fa fa-map-marker"></i>Bolsas por Parceiros</span>
 	</div> </a>
-	<!--Grafico estudantes por país-->
+	<!--Grafico estudantes por pais-->
 	<a href="<?php echo base_url('index.php/csf/view_std_country');?>">
-	<div class="botao-2">
+	<div class="botao-1">
 		<span>Bolsas por país</span>
 	</div> </a>
-	<!--Texto-->
+	<!--Grafico estudantes por cursos-->
 	<a href="<?php echo base_url('index.php/csf/view_std_course');?>">
-	<div class="botao-3">
+	<div class="botao-1">
 		<span>Bolsas por curso</span>
 	</div> </a>
-	<!--Texto-->
+	<!--Grafico estudantes por instituicao de ensino-->
 	<a href="<?php echo base_url('index.php/csf/view_std_university');?>">
-	<div class="botao-4">
+	<div class="botao-2">
 		<span>Bolsas por instituição</span>
 	</div> </a>
-	<!--Grafico estudantes por país-->
+	<!--Grafico estudantes por status-->
 	<a href="<?php echo base_url('index.php/csf/view_std_status');?>">
-	<div class="botao-5">
+	<div class="botao-2">
 		<span>Situação dos estudantes</span>
-	</div> </a>
-	</a> <!--Texto-->
+	</div></a>
+	<!--Grafico estudantes por genero-->
 	<a href="<?php echo base_url('index.php/csf/view_std_genero');?>">
-	<div class="botao-6">
+	<div class="botao-2">
 		<span>Bolsas por gênero </span>
 	</div> </a>
+		
+	<!--Grafico mapa mundi de onde estão os estudantes-->
+	<a href="<?php echo base_url('index.php/csf/view_std_map_word');?>">
+	<div class="botao-3">
+		<span>Avanço anual </span>
+	</div> </a>
+	<!-- 
+	<a href="<?php echo base_url('index.php/csf/view_std_xxx');?>">
+	<div class="botao-3">
+		<span>Mapa 2</span>
+	</div> </a>
+	<a href="<?php echo base_url('index.php/csf/view_std_xxx');?>">
+	<div class="botao-3">
+		<span>Mapa 2</span>
+	</div> </a>
+	-->
+	
+	<!--Botao para retorna a pag anterior-->
+	<form>
+		<input type="button" value="Voltar"onClick="JavaScript: window.history.back();">
+	</form>
 </div>

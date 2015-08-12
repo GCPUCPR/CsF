@@ -1,30 +1,28 @@
 <?php
 $dados = '';
-foreach ($dado_university as $key => $value) {
+foreach ($dado_mapaword as $key => $value) {
 	$dados .= "['$key',   $value],";
 }
 ?>
+
 <!-- Grafico HighChart--->
 <script type="text/javascript">
 	$(function() {
-		$('#graf-3').highcharts({//alterar nome da div para cada grafico
+		//alterar nome da div para cada grafico
+		$('#graf-6').highcharts({
 			chart : {
-				//type : 'column'
-				//type : 'line'
-				//type : 'bar'
-				//type : 'pie'
-				type: 'area'
+				type : 'line'
 			},
 			title : {
-				text : 'Universidades de destino...:'
+				text : 'Avanço anual de estudantes'
 			},
 			subtitle : {
-				text : 'Top 10'
+				//text : 'Top 7'
 			},
 			xAxis : {
 				type : 'category',
 				labels : {
-					rotation : -45,
+					rotation : 0,
 					style : {
 						fontSize : '10px',
 						fontFamily : 'Verdana, sans-serif'
@@ -45,12 +43,13 @@ foreach ($dado_university as $key => $value) {
 			},
 			series : [{
 				name : 'Population',
+				color: '#B21120',
 				data : [<?php echo "$dados" ?>],
 				dataLabels : {
 					enabled : true,
-					rotation : -45,
+					rotation : 0,
 					color : '#FFFFFF',
-					align : 'right',
+					align : 'center',
 					format : '{point.y:.0f}', // no decimal in number, format for inbteger
 					y : 3, // 3 pixels down from the top
 					style : {
@@ -60,14 +59,13 @@ foreach ($dado_university as $key => $value) {
 				}
 			}]
 		});
-	}); 
+	});
 </script>
-<div id="graf-3" style="width: 800px; height: 400px; margin: 0 auto padding-bottom: 8px; border: 1px solid #AF3E4D; margin-top: 150px; "></div>
+<div id="graf-6" style="width: 800px; height: 400px; margin: 0 auto padding-bottom: 8px; border: 1px solid #AF3E4D; margin-top: 150px; "></div>
 <br />
+</div>
 <!--Botao para retorna a pag anterior-->
 <form>
-   <input type="button" value="Voltar"onClick="JavaScript: window.history.back();">
+    <input type="button" value="Voltar"onClick="JavaScript: window.history.back();">
 </form>
 <br />
-
-

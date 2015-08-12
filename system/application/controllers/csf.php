@@ -292,7 +292,7 @@ class csf extends Controller {
 		$this -> load -> view('componentes/footer');
 	}
 
-	//GRAFICO 6 => grafico dod estudantes por genero
+	//GRAFICO 6 => grafico dos estudantes por genero
 	function view_std_genero() {
 		$this -> load -> model('csfs');
 		$this -> cab();
@@ -309,5 +309,25 @@ class csf extends Controller {
 		}
 		$this -> load -> view('componentes/footer');
 	}
+	
+	//Mapa 01 => estudantes no mundo
+	function view_std_map_word() {
+		$this -> load -> model('csfs');
+		$this -> cab();
+
+		if ($this -> idioma == 'en') {
+			//$this -> load -> view('csf/view_std_genero_en');
+		} else {
+			//carrega grafico estudantes por genero
+			$data_mapa = array();
+			$line = $this -> csfs -> mostra_std_map();
+			$data_map['dado_mapaword'] = $line;
+			//$this -> load -> view('csf/view_std_map_word');
+			$this -> load -> view('csf/view_std_map_word', $data_map);
+
+		}
+		$this -> load -> view('componentes/footer');
+	}	
+	
 
 }

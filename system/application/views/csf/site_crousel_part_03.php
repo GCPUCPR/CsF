@@ -10,10 +10,12 @@
         <div class="col-md-5">
           <img class="featurette-image img-responsive center-block" src="<?php echo base_url('img/thumbsup-icone.png');?>" alt="Generic placeholder image">
         </div>
+        
       </div>
 
       <hr class="featurette-divider">
-		
+	
+
 	  <!--	
       <div class="row featurette"  data-sr="enter bottom, hustle 10px">
         <div class="col-md-7 col-md-push-5">

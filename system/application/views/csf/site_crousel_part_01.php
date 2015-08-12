@@ -14,7 +14,7 @@
             <div class="carousel-caption">
               <h1>Somos 322 alunos CsF PUCPR pelo mundo.</h1>
               <p>Saiba mais sobre os nossos bolsistas.</p>
-              <p><a class="btn btn-lg btn-primary botao-home" href="<?php echo base_url('index.php/indicadores');?>" role="button">Ver indicadores</a></p>
+              <p><a class="btn btn-lg btn-primary botao-home" href="<?php echo base_url('index.php/csf/indicadores');?>" role="button">Ver indicadores</a></p>
             </div>
           </div>
         </div>
@@ -24,7 +24,7 @@
             <div class="carousel-caption">
               <h1>Depoimento dos intercâmbistas CsF da PUCPR.</h1>
               <p>Veja o que os estudantes da PUCPR estão falando sobre o <i>Ciência sem Fronteiras</i>.</p>
-              <p><a class="btn btn-lg btn-primary botao-home" href="<?php echo base_url('index.php/depoimentos');?>" role="button">Ver detalhes</a></p>
+              <p><a class="btn btn-lg btn-primary botao-home" href="<?php echo base_url('index.php/csf/depoimentos');?>" role="button">Ver detalhes</a></p>
             </div>
           </div>
         </div>
