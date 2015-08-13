@@ -226,7 +226,11 @@ class csf extends Controller {
 		$this -> cab();
 
 		if ($this -> idioma == 'en') {
-			$this -> load -> view('csf/view_std_course_en');
+			//carrega grafico estudantes por paises
+			$data_country = array();
+			$line = $this -> csfs -> mostra_dados_std_country();
+			$data_country['dado_country'] = $line;
+			$this -> load -> view('csf/view_std_country_en', $data_country);
 		} else {
 			//carrega grafico estudantes por paises
 			$data_country = array();
@@ -244,7 +248,11 @@ class csf extends Controller {
 		$this -> cab();
 
 		if ($this -> idioma == 'en') {
-			$this -> load -> view('csf/view_std_course_en');
+			//carrega grafico dos cursos que mais enviam alunos
+			$data_course = array();
+			$line = $this -> csfs -> mostra_std_course();
+			$data_course['dado_course'] = $line;
+			$this -> load -> view('csf/view_std_course_en', $data_course);
 		} else {
 			//carrega grafico dos cursos que mais enviam alunos
 			$data_course = array();
@@ -262,7 +270,11 @@ class csf extends Controller {
 		$this -> cab();
 
 		if ($this -> idioma == 'en') {
-			$this -> load -> view('csf/view_std_university_en');
+			//carrega grafico de estudantes por universidade
+			$data_university = array();
+			$line = $this -> csfs -> mostra_dados_std_university();
+			$data_university['dado_university'] = $line;
+			$this -> load -> view('csf/view_std_university_en', $data_university);
 		} else {
 			//carrega grafico de estudantes por universidade
 			$data_university = array();
@@ -280,7 +292,11 @@ class csf extends Controller {
 		$this -> cab();
 
 		if ($this -> idioma == 'en') {
-			$this -> load -> view('csf/view_std_status_en');
+			//carrega grafico da situacao dos estudantes intercambistas
+			$data = array();
+			$line = $this -> csfs -> mostra_dados_std_status();
+			$data_status['dado_st'] = $line;
+			$this -> load -> view('csf/view_std_status_en', $data_status);
 		} else {
 			//carrega grafico da situacao dos estudantes intercambistas
 			$data = array();
@@ -298,7 +314,11 @@ class csf extends Controller {
 		$this -> cab();
 
 		if ($this -> idioma == 'en') {
-			//$this -> load -> view('csf/view_std_genero_en');
+			//carrega grafico estudantes por genero
+			$data_gen = array();
+			$line = $this -> csfs -> mostra_dados_std_genero();
+			$data_genero['dado_gen'] = $line;
+			$this -> load -> view('csf/view_std_gen_en', $data_genero);
 		} else {
 			//carrega grafico estudantes por genero
 			$data_gen = array();
@@ -316,7 +336,12 @@ class csf extends Controller {
 		$this -> cab();
 
 		if ($this -> idioma == 'en') {
-			//$this -> load -> view('csf/view_std_genero_en');
+			//carrega grafico estudantes por genero
+			$data_mapa = array();
+			$line = $this -> csfs -> mostra_std_map();
+			$data_map['dado_mapaword'] = $line;
+			//$this -> load -> view('csf/view_std_map_word');
+			$this -> load -> view('csf/view_std_map_word_en', $data_map);
 		} else {
 			//carrega grafico estudantes por genero
 			$data_mapa = array();

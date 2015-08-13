@@ -8,42 +8,50 @@
 </div>
 <!--Botões-->
 <div class="botoes-indicadores">
-	<!--Mada mundo-->
-	<a href="pagina-mapa.php">
+	<!--Grafico Parceiros-->
+	<a href="<?php echo base_url('index.php/csf/view_std_partners');?>">
 	<div class="botao-1">
-		<span><i class="fa fa-map-marker"></i>Map of SwB scholarship students</span>
+		<span><i class="fa fa-map-marker"></i>SwB partners</span>
 	</div> </a>
-	<!--Texto-->
-	<a href="pagina-grafico.php">
+	<!--Grafico estudantes por pais-->
+	<a href="<?php echo base_url('index.php/csf/view_std_country');?>">
 	<div class="botao-1">
 		<span>Scholarships by country</span>
 	</div> </a>
-	<!--Texto-->
-	<a href="pagina-grafico-1.php">
-	<div class="botao-2">
+	<!--Grafico estudantes por cursos-->
+	<a href="<?php echo base_url('index.php/csf/view_std_course');?>">
+	<div class="botao-1">
 		<span>Scholarships by course</span>
 	</div> </a>
-	<!--Texto-->
-	<a href="pagina-grafico-2.php">
+	<!--Grafico estudantes por instituicao de ensino-->
+	<a href="<?php echo base_url('index.php/csf/view_std_university');?>">
+	<div class="botao-2">
+		<span>Scholarships by institution</span>
+	</div> </a>
+	<!--Grafico estudantes por status-->
+	<a href="<?php echo base_url('index.php/csf/view_std_status');?>">
+	<div class="botao-2">
+		<span>Status by students</span>
+	</div></a>
+	<!--Grafico estudantes por genero-->
+	<a href="<?php echo base_url('index.php/csf/view_std_genero');?>">
+	<div class="botao-2">
+		<span>Gender of students</span>
+	</div> </a>
+	<!--Grafico mapa mundi de onde estão os estudantes-->
+	<a href="<?php echo base_url('index.php/csf/view_std_map_word');?>">
 	<div class="botao-3">
-		<span>Scholarships by course and institution</span>
-	</div> </a>
-	<!--Texto-->
-	<a href="pagina-grafico-3.php">
-	<div class="botao-4">
-		<span>Scholarships by title</span>
-	</div> </a>
-	<!--Texto-->
-	<a href="pagina-grafico-4.php">
-	<div class="botao-5">
-		<span>Scholarships by gender</span>
+		<span>Annual growth </span>
 	</div> </a>
 	<!--
-	<a href="pagina-grafico-5.php">
-	<div class="botao-6">
-	<span>Perfil dos estudantes de Intercâmbio</span>
-	</div>
-	</a>
+	<a href="<?php echo base_url('index.php/csf/view_std_xxx');?>">
+	<div class="botao-3">
+	<span>Mapa 2</span>
+	</div> </a>
+	<a href="<?php echo base_url('index.php/csf/view_std_xxx');?>">
+	<div class="botao-3">
+	<span>Mapa 2</span>
+	</div> </a>
 	-->
 </div>
 <div class="clear"></div>

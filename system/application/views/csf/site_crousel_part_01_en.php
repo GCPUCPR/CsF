@@ -17,7 +17,7 @@
 						Learn more about our fellows.
 					</p>
 					<p>
-						<a class="btn btn-lg btn-primary botao-home" href="../cienciasemfronteiras_eng/indicadores.php" role="button">See indicators</a>
+						<a class="btn btn-lg btn-primary botao-home" href="<?php echo base_url('index.php/csf/indicadores');?>" role="button">See indicators</a>
 					</p>
 				</div>
 			</div>
@@ -31,7 +31,7 @@
 						See what students from the PUCPR are saying aboutScience without Borders.
 					</p>
 					<p>
-						<a class="btn btn-lg btn-primary botao-home" href="../cienciasemfronteiras_eng/depoimentos.php" role="button">See details</a>
+						<a class="btn btn-lg btn-primary botao-home" href="<?php echo base_url('index.php/csf/depoimentos');?>" role="button">See details</a>
 					</p>
 				</div>
 			</div>

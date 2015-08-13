@@ -13,7 +13,7 @@ foreach ($dado_gen as $key => $value) {
 				type : 'pie'
 			},
 			title : {
-				text : 'Gênero dos estudantes:'
+				text : 'Gender of students:'
 			},
 			subtitle : {
 				//text : 'Top 7'
@@ -31,14 +31,14 @@ foreach ($dado_gen as $key => $value) {
 			yAxis : {
 				min : 0,
 				title : {
-					text : 'Escala'
+					text : 'Number of students'
 				}
 			},
 			legend : {
 				enabled : false
 			},
 			tooltip : {
-				pointFormat : '<b>{point.y:.0f}</b> Estudantes'
+				pointFormat : '<b>{point.y:.0f}</b> Students'
 			},
 			series : [{
 				name : 'Population',

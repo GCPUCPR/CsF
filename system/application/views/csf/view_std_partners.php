@@ -11,7 +11,7 @@ foreach ($dado_partners as $key => $value) {
 		//alterar nome da div para cada grafico
 		$('#graf').highcharts({
 			chart : {
-				type : 'line'
+				type : 'area'
 			},
 			title : {
 				text : 'Parceiros de maior participação no intercambio:'
@@ -62,9 +62,4 @@ foreach ($dado_partners as $key => $value) {
 	});
 </script>
 <div id="graf" style="width: 800px; height: 400px; margin: 0 auto padding-bottom: 8px; border: 1px solid #AF3E4D; margin-top: 150px; "></div>
-<br />
-<!--Botao para retorna a pag anterior-->
-<form>
-    <input type="button" value="Voltar"onClick="JavaScript: window.history.back();">
-</form>
 <br />

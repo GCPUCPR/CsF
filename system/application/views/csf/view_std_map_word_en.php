@@ -1,19 +1,20 @@
 <?php
 $dados = '';
-foreach ($dado_gen as $key => $value) {
+foreach ($dado_mapaword as $key => $value) {
 	$dados .= "['$key',   $value],";
 }
 ?>
+
 <!-- Grafico HighChart--->
 <script type="text/javascript">
 	$(function() {
 		//alterar nome da div para cada grafico
 		$('#graf-6').highcharts({
 			chart : {
-				type : 'pie'
+				type : 'line'
 			},
 			title : {
-				text : 'Gênero dos estudantes:'
+				text : 'Annual growth:'
 			},
 			subtitle : {
 				//text : 'Top 7'
@@ -31,17 +32,18 @@ foreach ($dado_gen as $key => $value) {
 			yAxis : {
 				min : 0,
 				title : {
-					text : 'Escala'
+					text : 'Number of students'
 				}
 			},
 			legend : {
 				enabled : false
 			},
 			tooltip : {
-				pointFormat : '<b>{point.y:.0f}</b> Estudantes'
+				pointFormat : '<b>{point.y:.0f}</b> Students'
 			},
 			series : [{
 				name : 'Population',
+				color: '#B21120',
 				data : [<?php echo "$dados" ?>],
 				dataLabels : {
 					enabled : true,
@@ -62,4 +64,4 @@ foreach ($dado_gen as $key => $value) {
 <div id="graf-6" style="width: 800px; height: 400px; margin: 0 auto padding-bottom: 8px; border: 1px solid #AF3E4D; margin-top: 150px; "></div>
 <br />
 
-
+<br />

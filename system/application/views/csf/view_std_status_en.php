@@ -1,22 +1,21 @@
 <?php
 $dados = '';
-foreach ($dado_gen as $key => $value) {
-	$dados .= "['$key',   $value],";
+foreach ($dado_st as $key => $value) {
+	$dados .= "['$key', $value],";
 }
 ?>
 <!-- Grafico HighChart--->
 <script type="text/javascript">
 	$(function() {
-		//alterar nome da div para cada grafico
-		$('#graf-6').highcharts({
+		$('#graf-4').highcharts({
 			chart : {
-				type : 'pie'
+				type : 'bar'
 			},
 			title : {
-				text : 'Gênero dos estudantes:'
+				text : 'Status of students:'
 			},
 			subtitle : {
-				//text : 'Top 7'
+				//text : 'Source: <a href="http://en.wikipedia.org/wiki/List_of_cities_proper_by_population">Wikipedia</a>'
 			},
 			xAxis : {
 				type : 'category',
@@ -31,14 +30,14 @@ foreach ($dado_gen as $key => $value) {
 			yAxis : {
 				min : 0,
 				title : {
-					text : 'Escala'
+					text : 'Number of students'
 				}
 			},
 			legend : {
 				enabled : false
 			},
 			tooltip : {
-				pointFormat : '<b>{point.y:.0f}</b> Estudantes'
+				pointFormat : '<b>{point.y:.0f}</b> Students'
 			},
 			series : [{
 				name : 'Population',
@@ -47,7 +46,7 @@ foreach ($dado_gen as $key => $value) {
 					enabled : true,
 					rotation : 0,
 					color : '#FFFFFF',
-					align : 'center',
+					align : 'right',
 					format : '{point.y:.0f}', // no decimal in number, format for inbteger
 					y : 3, // 3 pixels down from the top
 					style : {
@@ -57,9 +56,9 @@ foreach ($dado_gen as $key => $value) {
 				}
 			}]
 		});
-	});
+	}); 
 </script>
-<div id="graf-6" style="width: 800px; height: 400px; margin: 0 auto padding-bottom: 8px; border: 1px solid #AF3E4D; margin-top: 150px; "></div>
+<div id="graf-4" style="width: 800px; height: 400px; margin: 0 auto padding-bottom: 8px; border: 1px solid #AF3E4D; margin-top: 150px; "></div>
 <br />
 
 

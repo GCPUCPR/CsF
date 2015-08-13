@@ -14,7 +14,7 @@ foreach ($dado_mapaword as $key => $value) {
 				type : 'line'
 			},
 			title : {
-				text : 'Avanço anual de estudantes'
+				text : 'Crescimento anual de estudantes no programa:'
 			},
 			subtitle : {
 				//text : 'Top 7'
@@ -63,9 +63,5 @@ foreach ($dado_mapaword as $key => $value) {
 </script>
 <div id="graf-6" style="width: 800px; height: 400px; margin: 0 auto padding-bottom: 8px; border: 1px solid #AF3E4D; margin-top: 150px; "></div>
 <br />
-</div>
-<!--Botao para retorna a pag anterior-->
-<form>
-    <input type="button" value="Voltar"onClick="JavaScript: window.history.back();">
-</form>
+
 <br />

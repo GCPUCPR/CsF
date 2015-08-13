@@ -55,4 +55,3 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 			<td width="32%" class="lt0">-</td>
 		</tr>
 	</table>
-</div>

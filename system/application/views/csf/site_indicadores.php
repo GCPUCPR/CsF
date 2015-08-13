@@ -38,25 +38,20 @@
 	<div class="botao-2">
 		<span>Bolsas por gênero </span>
 	</div> </a>
-		
 	<!--Grafico mapa mundi de onde estão os estudantes-->
 	<a href="<?php echo base_url('index.php/csf/view_std_map_word');?>">
 	<div class="botao-3">
 		<span>Avanço anual </span>
 	</div> </a>
-	<!-- 
+	<!--
 	<a href="<?php echo base_url('index.php/csf/view_std_xxx');?>">
 	<div class="botao-3">
-		<span>Mapa 2</span>
+	<span>Mapa 2</span>
 	</div> </a>
 	<a href="<?php echo base_url('index.php/csf/view_std_xxx');?>">
 	<div class="botao-3">
-		<span>Mapa 2</span>
+	<span>Mapa 2</span>
 	</div> </a>
 	-->
-	
-	<!--Botao para retorna a pag anterior-->
-	<form>
-		<input type="button" value="Voltar"onClick="JavaScript: window.history.back();">
-	</form>
 </div>
+<div class="clear"></div>
