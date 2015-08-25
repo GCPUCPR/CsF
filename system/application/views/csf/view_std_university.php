@@ -13,7 +13,7 @@ foreach ($dado_university as $key => $value) {
 				//type : 'line'
 				//type : 'bar'
 				//type : 'pie'
-				type: 'area'
+				type: 'column'
 			},
 			title : {
 				text : 'Universidades de destino:'

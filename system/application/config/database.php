@@ -35,41 +35,26 @@
 */
 /*Data base MySql is default*/
 $active_group = 'default';
-$active_record = TRUE;
+$query_builder = TRUE;
 
-$db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'root';
-$db['default']['password'] = 'root';
-$db['default']['database'] = 'cip';
-$db['default']['dbdriver'] = 'mysql';
-$db['default']['dbprefix'] = '';
-$db['default']['pconnect'] = TRUE;
-$db['default']['db_debug'] = TRUE;
-$db['default']['cache_on'] = FALSE;
-$db['default']['cachedir'] = '';
-$db['default']['char_set'] = 'utf8';
-$db['default']['dbcollat'] = 'utf8_general_ci';
-$db['default']['swap_pre'] = '';
-$db['default']['autoinit'] = TRUE;
-$db['default']['stricton'] = FALSE;
-
-
-/*Data base postgre*/
-$active_record = TRUE;
-
-$db['postgre']['hostname'] = "10.100.1.131";
-$db['postgre']['username'] = "ojsbr";
-$db['postgre']['password'] = "ojsbr-2006";
-$db['postgre']['database'] = "ojsbr";
-$db['postgre']['dbdriver'] = "postgre";
-$db['postgre']['port'] = "8130";
-$db['postgre']['dbprefix'] = "";
-$db['postgre']['pconnect'] = TRUE;
-$db['postgre']['db_debug'] = TRUE;
-$db['postgre']['cache_on'] = FALSE;
-$db['postgre']['cachedir'] = "";
-$db['postgre']['char_set'] = "utf8";
-$db['postgre']['dbcollat'] = "utf8_general_ci";
-
-/* End of file database.php */
-/* Location: ./system/application/config/database.php */
+$db['default'] = array(
+	'dsn'	=> '',
+	'hostname' => 'localhost',
+	'username' => 'root',
+	'password' => 'root',
+	'database' => 'cip',
+	'dbdriver' => 'mysql',
+	'dbprefix' => '',
+	'pconnect' => FALSE,
+	'db_debug' => TRUE,
+	'cache_on' => FALSE,
+	'cachedir' => '',
+	'char_set' => 'latin1',
+	'dbcollat' => 'latin1_swedish_ci',
+	'swap_pre' => '',
+	'encrypt' => FALSE,
+	'compress' => FALSE,
+	'stricton' => FALSE,
+	'failover' => array(),
+	'save_queries' => TRUE
+);

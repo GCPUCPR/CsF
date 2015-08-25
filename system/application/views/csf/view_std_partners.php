@@ -11,7 +11,7 @@ foreach ($dado_partners as $key => $value) {
 		//alterar nome da div para cada grafico
 		$('#graf').highcharts({
 			chart : {
-				type : 'area'
+				type : 'bar'
 			},
 			title : {
 				text : 'Parceiros de maior participação no intercambio:'

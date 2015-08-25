@@ -864,7 +864,7 @@ class csfs extends Model {
 	/** Alunos no mundo */
 	function mostra_std_map() {
 		$sql = "select left(csf_saida,4) as ano, count(*) as qtd
-				from csf_view 
+				from csf_view where csf_saida <> '0000-00-00'
 				group by ano 
 				order by ano
 				";
