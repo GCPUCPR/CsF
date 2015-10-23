@@ -880,6 +880,17 @@ class csfs extends Model {
 		}
 		return ($dados);
 	}
+	
+	function total_std(){
+		$sql = "select count(us_genero) as qtd
+				from csf_view 
+				";
+		$rlt = $this -> db -> query($sql);
+	
+		return $rlt;
+		
+	}
+	
 
 }
 ?>

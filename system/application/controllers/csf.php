@@ -349,10 +349,18 @@ class csf extends Controller {
 			$data_map['dado_mapaword'] = $line;
 			//$this -> load -> view('csf/view_std_map_word');
 			$this -> load -> view('csf/view_std_map_word', $data_map);
-
 		}
 		$this -> load -> view('componentes/footer');
 	}	
 	
+	function toatl(){
+		
+		$data_mapa = array();
+			$line = $this -> csfs -> total_std();
+			$data_total['total_std'] = $line;
+			
+			$this -> load -> view('csf/site_crousel_part_01', $data_total);
+		
+	}
 
 }
