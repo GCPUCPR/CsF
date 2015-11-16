@@ -809,18 +809,17 @@ class csfs extends Model {
 
 	/** Alunos por cursos csf_curso*/
 	function mostra_std_course() {
-		$sql = "select csf_curso, count(gpip_nome) as qtd
-				from csf_view group by csf_curso order by qtd desc limit 7
+		$sql = "select us_curso_vinculo, count(us_curso_vinculo) as qtd
+				from csf_view group by us_curso_vinculo order by qtd desc limit 10
 				";
 		$rlt = $this -> db -> query($sql);
 		$rlt = $rlt -> result_array($rlt);
-		$line = $rlt[0];
 		//return values
 		$tot = 0;
 		$dados = array();
 		for ($r = 0; $r < count($rlt); $r++) {
 			$line = $rlt[$r];
-			$dados[$line['csf_curso']] = $line['qtd'];
+			$dados[$line['us_curso_vinculo']] = $line['qtd'];
 		}
 		return ($dados);
 	}

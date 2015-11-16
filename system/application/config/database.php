@@ -37,11 +37,12 @@
 $active_group = 'default';
 $query_builder = TRUE;
 
+/** Homologação **/
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => 'root',
+	'hostname' => '10.100.3.55',
+	'username' => 'cip',
+	'password' => 'cipdes2015!',
 	'database' => 'cip',
 	'dbdriver' => 'mysql',
 	'dbprefix' => '',
@@ -56,5 +57,30 @@ $db['default'] = array(
 	'compress' => FALSE,
 	'stricton' => FALSE,
 	'failover' => array(),
-	'save_queries' => TRUE
+	'save_queries' => TRUE	
 );
+
+/**localhost**/
+/**
+$db['default'] = array(
+	'dsn'	=> '',
+	'hostname' => 'localhost',
+	'username' => 'root',
+	'password' => 'root!',
+	'database' => 'cip',
+	'dbdriver' => 'mysql',
+	'dbprefix' => '',
+	'pconnect' => FALSE,
+	'db_debug' => TRUE,
+	'cache_on' => FALSE,
+	'cachedir' => '',
+	'char_set' => 'latin1',
+	'dbcollat' => 'latin1_swedish_ci',
+	'swap_pre' => '',
+	'encrypt' => FALSE,
+	'compress' => FALSE,
+	'stricton' => FALSE,
+	'failover' => array(),
+	'save_queries' => TRUE	
+);
+*/

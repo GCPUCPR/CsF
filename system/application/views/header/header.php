@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Ciências sem Fronteiras</title>
-
+		
     <!-- Bootstrap -->
     
     <link href="<?php echo base_url('');?>css/bootstrap.min.css" rel="stylesheet">
@@ -17,7 +17,7 @@
     <link href="<?php echo base_url('');?>css/font-stylesheet.css" rel="stylesheet">
     <link href="<?php echo base_url('');?>css/tabs.css" rel="stylesheet" type="text/css"/>
     <link href="<?php echo base_url('');?>css/tabstyles.css" rel="stylesheet" type="text/css"/>
-
+		
 	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="<?php echo base_url('');?>js/modernizr.custom.js"></script>
     <script src="<?php echo base_url('');?>js/npm.js"></script>
@@ -58,9 +58,6 @@
 	  ga('create', 'UA-63147889-1', 'auto');
 	  ga('send', 'pageview');
 	</script>
-	
-
-
 		
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

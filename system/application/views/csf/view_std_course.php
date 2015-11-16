@@ -3,24 +3,25 @@ $dados = '';
 foreach ($dado_course as $key => $value) {
 	$dados .= "['$key',   $value],";
 }
+
 ?>
 <!-- Grafico HighChart--->
 <script type="text/javascript">
 	$(function() {
 		$('#graf-2').highcharts({//alterar nome da div para cada grafico
 			chart : {
-				type : 'line'
+				type : 'bar'
 			},
 			title : {
-				text : 'Cursos que mais enviam estudantes...:'
+				text : 'Cursos que mais enviam estudantes:'
 			},
 			subtitle : {
-				text : 'Top 7'
+				text : 'Top 10'
 			},
 			xAxis : {
 				type : 'category',
 				labels : {
-					rotation : -45,
+					rotation : 0,
 					style : {
 						fontSize : '10px',
 						fontFamily : 'Verdana, sans-serif'

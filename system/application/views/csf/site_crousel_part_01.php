@@ -1,9 +1,4 @@
-<?php
-$dados = '';
 
-$dados .= '$total_std';
-
-?>
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
 	<!-- Indicators -->
 	<ol class="carousel-indicators">
@@ -16,7 +11,7 @@ $dados .= '$total_std';
 			<img class="first-slide" src="<?php echo base_url('img/photo-99.jpg');?>" alt="First slide">
 			<div class="container">
 				<div class="carousel-caption">
-					<h1>Somos <?php echo "$dados" ?> alunos CsF PUCPR pelo mundo.</h1>
+					<h1>Somos 421 alunos CsF PUCPR pelo mundo.</h1>
 					<p>
 						Saiba mais sobre os nossos bolsistas.
 					</p>
